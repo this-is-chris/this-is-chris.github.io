@@ -13,14 +13,14 @@ const openDoorSecond = (day, event) => {
         event.target.addEventListener("click", openDoorThird.bind(null, day));
     }
 }
-
+/*
 const openDoorThird = (day, event) => {
     if (day == 1) {
         let url = `./tueren/tuer-${day}.html`;
         window.open(url, '_blank').focus();
     }
 }
-
+*/
 const createCalendar = () => {
     for(let i = 0; i  < calendarDays; i++) {
         const calendarDoor = document.createElement("div");
@@ -35,7 +35,6 @@ const createCalendar = () => {
         calendarDoor.appendChild(calendarDoorText);
 
         day = i + 1;
-        //let coursePath = `./images/tuer-${day}.png`;
 
         calendarDoorText.addEventListener("click", openDoor.bind(null, day));
     }
