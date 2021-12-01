@@ -9,6 +9,8 @@
 
   html {
     background-color: #262139;
+    max-width: 828px;
+    max-height: 1792px;
   }
 
   .container {
@@ -18,6 +20,8 @@
       padding-bottom: 72px;
       width: 810px;
       height: 1536px;
+      max-width: 810px;
+      max-height: 1536px;
       background-image: url("./images/calendar-0.png");
       background-size: cover;
       display: grid;
