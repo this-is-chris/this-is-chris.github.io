@@ -10,7 +10,7 @@ const openDoor = (day, event) => {
 const openDoorSecond = (day, event) => {
     if (day == 1) {
         event.target.parentNode.style.backgroundImage = `url(./images/tuer-${day}.png)`;
-        event.target.addEventListener("click", openDoorThird.bind(null, day));
+        //event.target.addEventListener("click", openDoorThird.bind(null, day));
     }
 }
 /*
