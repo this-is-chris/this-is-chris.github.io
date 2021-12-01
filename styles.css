@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "PressStart2P";
+    src: url("./font/PressStart2P.ttf");
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: #262139;
+  }
+
+  .container {
+      padding-top: 210px;
+      padding-right: 0px;
+      padding-left: 24px;
+      padding-bottom: 72px;
+      width: 810px;
+      height: 1536px;
+      background-image: url("./images/calendar-0.png");
+      background-size: cover;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      grid-gap: 18px;
+      grid-template-areas:
+        "door7 door6 door3 door11"
+        "door14 door4 door13 door9"
+        "door22 door12 door24 door19"
+        "door2 door17 door5 door20"
+        "door1 door21 door8 door15"
+        "door16 door10 door18 door23";
+  }
+  
+  .image {
+      background-image: none;
+      background-size: cover;
+      background-position: center;
+  }
+  
+  .text {
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      padding: 18px;
+      color: orange;
+      font-family: "PressStart2P";
+      font-size: 24px;
+      transition: opacity 1.5s;
+      border: 1px solid black;
+      box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);
+      text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  }
