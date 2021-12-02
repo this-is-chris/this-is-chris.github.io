@@ -9,8 +9,6 @@
 
   html {
     background-color: #262139;
-    max-width: 828px;
-    max-height: 1792px;
   }
 
   .container {
@@ -29,7 +27,7 @@
       grid-template-rows: repeat(6, 1fr);
       grid-gap: 18px;
       grid-template-areas:
-        "door7 door6 door3 door11"
+        "door7 door11 door3 door6"
         "door14 door4 door13 door9"
         "door22 door12 door24 door19"
         "door2 door17 door5 door20"
