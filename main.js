@@ -18,10 +18,9 @@ const openDoorSecond = (day, event) => {
     }
 }
 
-const openDoorThird = (day) => {
-    if (day == 5) {
-        // Music Player?
-    } else if (day == 24) {
+const openDoorThird = (day, event) => {
+    event.target.style.opacity = "0";
+    if (day == 24) {
         let url = `./tueren/tuer-${day}.html`;
         window.open(url, '_blank').focus();
     }
