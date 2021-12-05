@@ -29,10 +29,10 @@
       grid-template-areas:
         "door7 door11 door3 door6"
         "door14 door4 door13 door9"
-        "door22 door12 door24 door19"
-        "door2 door17 door5 door20"
-        "door1 door21 door8 door15"
-        "door16 door10 door18 door23";
+        "door10 door12 door24 door19"
+        "door2 door20 door5 door21"
+        "door1 door8 door15 door17"
+        "door16 door22 door18 door23";
   }
   
   .image {
