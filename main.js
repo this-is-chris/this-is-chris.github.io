@@ -12,9 +12,7 @@ const openDoorFirst = (day, event) => {
 const openDoorSecond = (day, event) => {
     if (day <= currentDay) {
         event.target.parentNode.style.backgroundImage = `url(./images/tuer-${day}.png)`;
-        if (day == 5 || 24) {
-            event.target.addEventListener("click", openDoorThird.bind(null, day));
-        }
+        event.target.addEventListener("click", openDoorThird.bind(null, day));
     }
 }
 
