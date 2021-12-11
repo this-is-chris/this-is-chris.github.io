@@ -19,8 +19,7 @@ const openDoorSecond = (day, event) => {
 const openDoorThird = (day, event) => {
     event.target.style.opacity = "0";
     if (day == 24) {
-        let url = `./tueren/tuer-${day}.html`;
-        window.open(url, '_blank').focus();
+        //change background-img to calendar-24.png
     }
 }
 
