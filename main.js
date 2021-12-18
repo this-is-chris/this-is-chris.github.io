@@ -11,7 +11,15 @@ const openDoorFirst = (day, event) => {
 
 const openDoorSecond = (day, event) => {
     if (day <= currentDay) {
-        event.target.parentNode.style.backgroundImage = `url(./images/tuer-${day}.png)`;
+        if (day == 18 && currentDay >= 23) {
+            event.target.parentNode.style.backgroundImage = `url(./images/tuer-18-23.png)`;
+            calendarContainer.style.backgroundImage = `url(./images/calendar-23.png)`;
+        } else if (day == 18 && currentDay == 22) {
+            event.target.parentNode.style.backgroundImage = `url(./images/tuer-18-22.png)`;
+            calendarContainer.style.backgroundImage = `url(./images/calendar-22.png)`;
+        } else {
+            event.target.parentNode.style.backgroundImage = `url(./images/tuer-${day}.png)`;
+        }
         event.target.addEventListener("click", openDoorThird.bind(null, day));
     }
 }
