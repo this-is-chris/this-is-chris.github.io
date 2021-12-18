@@ -1,12 +1,13 @@
 const calendarContainer = document.querySelector(".container");
+const audio = document.querySelector("audio");
 
-const calendarDays = 24;
 const currentDate = new Date();
 const currentDay = currentDate.getDate();
+var sumOfDays = 0;
 
 const openDoorFirst = (day, event) => {
     event.target.style.opacity = "0.66";
-    event.target.addEventListener("click", openDoorSecond.bind(null, day));
+    event.target.addEventListener("click", openDoorSecond.bind(null, day), { once: true });
 }
 
 const openDoorSecond = (day, event) => {
@@ -20,19 +21,22 @@ const openDoorSecond = (day, event) => {
         } else {
             event.target.parentNode.style.backgroundImage = `url(./images/tuer-${day}.png)`;
         }
-        event.target.addEventListener("click", openDoorThird.bind(null, day));
+        event.target.addEventListener("click", openDoorThird.bind(null, day), { once: true });
     }
 }
 
 const openDoorThird = (day, event) => {
     event.target.style.opacity = "0";
-    if (day == 24) {
-        //change background-img to calendar-24.png
+    sumOfDays = sumOfDays + day;
+    if (sumOfDays == 300) { // Summe von 1 bis 24
+        calendarContainer.style.backgroundImage = `url(./images/calendar-24.png)`;
+        document.querySelectorAll(".image").forEach((e) => e.parentNode.removeChild(e));
+        audio.play();
     }
 }
 
 const createCalendar = () => {
-    for(let i = 0; i  < calendarDays; i++) {
+    for(let i = 0; i < 24; i++) {
         const calendarDoor = document.createElement("div");
         const calendarDoorText = document.createElement("div");
 
@@ -46,6 +50,6 @@ const createCalendar = () => {
 
         day = i + 1;
 
-        calendarDoorText.addEventListener("click", openDoorFirst.bind(null, day));
+        calendarDoorText.addEventListener("click", openDoorFirst.bind(null, day), { once: true });
     }
 }
