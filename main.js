@@ -33,6 +33,9 @@ const openDoorThird = (day, event) => {
         document.querySelectorAll(".image").forEach((e) => e.parentNode.removeChild(e));
         audio.play();
     }
+    if (day == 19) {
+        window.open("./images/19-fuchsi.jpg"); 
+    }
 }
 
 const createCalendar = () => {
